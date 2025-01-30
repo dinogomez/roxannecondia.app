@@ -1,18 +1,10 @@
-import { Config } from "@/lib/data";
-import React, { Suspense } from "react";
-import { polyfill } from "interweave-ssr";
-import { Interweave } from "interweave";
-import { Link } from "next-view-transitions";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage,
-} from "@/components/ui/breadcrumb";
-import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Config } from "@/lib/data";
+import { motion } from "framer-motion";
+import { Interweave } from "interweave";
+import { polyfill } from "interweave-ssr";
+import { Link } from "next-view-transitions";
+import { Suspense } from "react";
 
 polyfill();
 
@@ -92,14 +84,9 @@ function Experience() {
                       REMOTE
                     </span>
                   )}
-                   {exp.startup && (
-                    <span className="border bg-blue-500 text-white border-transparent dark:bg-transparent dark:border-blue-500 dark:text-blue-500 text-xs p-[0.10rem] px-1">
-                      STARTUP
-                    </span>
-                  )}
                 </h4>
                 <p className="flex items-center text-xs space-x-1 text-primary/80 dark:text-muted-foreground mt-1 mb-2 w-max">
-                  <span>{exp.name}</span> 
+                  <span>{exp.name}</span>
                 </p>
                 <p className="text-sm font-light dark:text-muted-foreground text-primary/80">
                   <Interweave content={exp.desc} />
